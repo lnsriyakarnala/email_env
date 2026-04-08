@@ -1,0 +1,13 @@
+name: email-triage-env
+description: Email triage and automation environment
+version: 1.0.0
+
+entry_point: env:EmailEnv
+
+tasks:
+  - name: easy
+    description: classify refund request
+  - name: medium
+    description: complaint detection
+  - name: hard
+    description: response generation
