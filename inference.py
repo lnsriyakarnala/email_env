@@ -13,9 +13,6 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 if HF_TOKEN is None:
     raise ValueError("HF_TOKEN environment variable is required")
 
-# =========================
-# OpenAI Client
-# =========================
 client = OpenAI(
     base_url=API_BASE_URL,
     api_key=HF_TOKEN
@@ -61,7 +58,6 @@ def model_response(email: str) -> str:
             return "complaint high"
         else:
             return "general"
-
 
 # =========================
 # Main Inference Loop
@@ -112,7 +108,6 @@ def main():
         print(
             f"[END] success={str(success).lower()} steps={steps} rewards={rewards_str}"
         )
-
 
 if __name__ == "__main__":
     main()
